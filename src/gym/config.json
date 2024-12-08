@@ -1,0 +1,22 @@
+{
+    "training": {
+        "MIN_BW": 100,
+        "MAX_BW": 500,
+        "MIN_LAT": 0.05,
+        "MAX_LAT": 0.5,
+        "MIN_QUEUE": 0,
+        "MAX_QUEUE": 8,
+        "MIN_LOSS": 0.0,
+        "MAX_LOSS": 0.05
+    },
+    "testing": {
+        "MIN_BW": 500,
+        "MAX_BW": 500,
+        "MIN_LAT": 0.05,
+        "MAX_LAT": 0.05,
+        "MIN_QUEUE": 1,
+        "MAX_QUEUE": 1,
+        "MIN_LOSS": 0.0,
+        "MAX_LOSS": 0.0
+    }
+}
