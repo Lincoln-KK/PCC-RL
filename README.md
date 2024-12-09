@@ -1,6 +1,6 @@
 # PCC-RL
-Reinforcement learning resources for the Performance-oriented Congestion Control
-project.
+This fork examines different action and reward functions for the Reinforcement learning environment for the Performance-oriented Congestion Control
+project. It examines different approaches to designing the action space. It compares useing direct setting of the transmission rate is superior to using a parameterized approach. It examines turning hte action space to discrete. The reward function coefficients are also modified and compared.
 
 ## Overview
 This repo contains the gym environment required for training reinforcement
@@ -9,15 +9,9 @@ run RL models in the PCC UDT codebase found at github.com/PCCProject/PCC-Uspace.
 
 
 ## Training
-To run training only, go to ./src/gym/, install any missing requirements for
-stable\_solve.py and run that script. By default, this should replicate the
-model presented in A Reinforcement Learning Perspective on Internet Congestion
-Control, ICML 2019.
+Proximal Policy Optimization is used from Stablebaselines3 to train the RL. Bash scripts are used to train on different environment parameters.
+Wandb is used for logging. To setup the requirements use `pip install -r requirements.txt`
 
 ## Testing Models
 
-To test models in the real world (i.e., sending real packets into the Linux
-kernel and out onto a real or emulated network), download and install the PCC
-UDT code from github.com/PCCProject/PCC-Uspace. Follow the instructions in that
-repo for using congestion control algorithms with Python modules, and see
-./src/gym/online/README.md for additional instructions regarding testing or training models in the real world.
+The models are tested within the training interval in order to examine the effect of each of the changes made.
